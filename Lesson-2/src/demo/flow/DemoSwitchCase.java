@@ -10,12 +10,11 @@ public class DemoSwitchCase {
 		switch (i) {
 			case 0:
 				System.out.println("A");
+//				return;
 				break;
-
 			case 1:
 				System.out.println("B");
 				break;
-
 			default:
 				System.out.println("Default");
 				break;

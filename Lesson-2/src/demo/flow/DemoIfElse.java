@@ -16,6 +16,7 @@ public class DemoIfElse {
 			System.out.println("Các trường hợp còn lại");
 		}
 
+
 		if (x > y) {
 			System.out.println("X là số lớn hơn");
 		} else {

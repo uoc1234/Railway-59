@@ -3,8 +3,8 @@ package demo.operator;
 public class DemoOperator {
 
 	public static void main(String[] args) {
-		int x = 5;
-		int y = 10;
+		int x = 12;
+		int y = 5;
 
 		System.out.println("Các toán tử Arithmetic Operators");
 		System.out.println("Toán tử cộng: " + (x + y));
