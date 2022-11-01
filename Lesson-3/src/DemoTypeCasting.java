@@ -7,6 +7,7 @@ public class DemoTypeCasting {
 
 		int i = 100;
 		long l = i;    // không yêu cầu chỉ định ép kiểu
+
 		float f = l;   // không yêu cầu chỉ định ép kiểu
 		System.out.println("Giá trị Int: " + i); // Giá trị Int: 100
 		System.out.println("Giá trị Long: " + l); // Giá trị Long: 100
@@ -19,7 +20,7 @@ public class DemoTypeCasting {
 		long l2 = (long) d; // yêu cầu chỉ định kiểu dữ liệu (long)
 		int i2 = (int) l; // yêu cầu chỉ định kiểu dữ liệu (int)
 
-		System.out.println("Giá trị Double: " + d);
+		System.out.println("Giá trị Double: " + i2);
 		System.out.println("Giá trị Long: " + l2);
 		System.out.println("Giá trị Int:  " + i2);
 
