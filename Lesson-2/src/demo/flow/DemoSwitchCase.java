@@ -1,8 +1,5 @@
 package demo.flow;
 
-import entity.Account;
-import entity.PositionName;
-
 public class DemoSwitchCase {
 
 	public static void main(String[] args) {

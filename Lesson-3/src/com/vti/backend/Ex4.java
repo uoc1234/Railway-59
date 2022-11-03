@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ex4 {
     public static void main(String[] args) {
         Ex4 ex4 = new Ex4();
-        ex4.ques3();
+        ex4.ques13();
     }
 
     public void ques1(){
@@ -38,5 +38,16 @@ public class Ex4 {
         String chu_cai_dau_viet_hoa = String.valueOf(s1.trim().charAt(0)).toUpperCase();
         String kq = chu_cai_dau_viet_hoa + s1.substring(1,s1.length());
         System.out.println(kq);
+    }
+
+    public void ques13(){
+        String input = "1abc";
+        boolean check = true;
+        for (int i = 0; i < input.length(); i++) {
+            if (!input.substring(i, i+1).getClass().equals(String.class)) {
+                check = false;
+            }
+        }
+        System.out.println(check);
     }
 }
