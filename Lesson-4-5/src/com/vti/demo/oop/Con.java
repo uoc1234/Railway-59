@@ -4,6 +4,7 @@ import com.vti.entity.Answer;
 
 public class Con extends Cha{
 
+    private int id;
 
     public Con() {
     }
