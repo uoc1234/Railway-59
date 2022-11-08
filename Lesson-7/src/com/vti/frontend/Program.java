@@ -37,10 +37,10 @@ public class Program {
 
 //        ------------------------------ File ------------------------------------------
         // Đường dẫn tuyệt đối
-//        FileUtils.checkFileExists("/Users/boss/Desktop/Work/VTI/Git/Railway-59/Lesson-7/file/test.txt");
+        FileUtils.checkFileExists("/Users/boss/Desktop/Work/VTI/Git/Railway-59/Lesson-7/file/test.txt");
 
         // Đường dẫn tương đối
-        //FileUtils.checkFileExists("Lesson-7/file/test.txt");
+        FileUtils.checkFileExists("Lesson-7/file/test.txt");
 
 
         FileUtils.createFile("1234.txt");
