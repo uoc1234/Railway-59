@@ -12,9 +12,15 @@ public class Account {
 	private String fullName;
 
 	public Account() {
+		this(1,"id");
 		this.id = count++;
 	}
 
+
+	public Account(int id, String fullName) {
+		this.id = id;
+		this.fullName = fullName;
+	}
 
 	public String getFullName() {
 		return fullName;

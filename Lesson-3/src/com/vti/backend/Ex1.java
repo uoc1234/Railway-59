@@ -6,6 +6,10 @@ public class Ex1 {
     public static void main(String[] args) {
         Ex1 ex1 = new Ex1();
         ex1.ques1();
+
+        int a = 4;
+
+        Integer.valueOf(a);
     }
 
     public void ques1(){
