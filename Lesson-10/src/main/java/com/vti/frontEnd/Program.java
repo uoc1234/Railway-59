@@ -1,8 +1,10 @@
 package com.vti.frontEnd;
 
-import com.vti.backend.AccountRepository;
+import com.vti.backend.repository.AccountRepository;
 
 import java.sql.SQLException;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Program {
@@ -10,6 +12,7 @@ public class Program {
         int menu;
         Scanner scanner = new Scanner(System.in);
         AccountRepository repository = new AccountRepository();
+        Function function = new Function();
         while (true) {
             System.out.println("------------------------- MENU -----------------------");
             System.out.println(" Mời chọn chức năng");
@@ -23,13 +26,13 @@ public class Program {
             menu = Integer.parseInt(scanner.nextLine());
             switch (menu) {
                 case 1:
-                    repository.getAllAccount();
+                    function.getAllAccount();
                     break;
                 case 2:
-//                    repository.findById();
+                    function.findByName();
                     break;
                 case 3:
-                    repository.findById();
+                    function.getById();
                     break;
                 case 4:
 //                    deletaCanbo();
