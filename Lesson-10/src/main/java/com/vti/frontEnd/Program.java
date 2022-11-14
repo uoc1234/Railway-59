@@ -26,10 +26,10 @@ public class Program {
                     repository.getAllAccount();
                     break;
                 case 2:
-//                    sreachCanbo();
+//                    repository.findById();
                     break;
                 case 3:
-//                    showAllCanbo();
+                    repository.findById();
                     break;
                 case 4:
 //                    deletaCanbo();

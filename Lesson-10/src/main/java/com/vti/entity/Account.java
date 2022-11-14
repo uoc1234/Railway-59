@@ -5,6 +5,9 @@ public class Account {
     private String username;
     private String password;
     private String firstName;
+
+    private String lastName;
+
     private Role role;
 
     public int getId() {
@@ -13,6 +16,14 @@ public class Account {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getUsername() {
@@ -52,8 +63,8 @@ public class Account {
         return "Account{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
                 ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", role=" + role +
                 '}';
     }

@@ -1,6 +1,7 @@
 package com.vti.backend;
 
 import com.vti.entity.Account;
+import com.vti.entity.Role;
 import com.vti.utils.JdbcUtils;
 
 import java.sql.ResultSet;
@@ -31,9 +32,27 @@ public class AccountRepository {
         return accounts;
     }
 
-    public Account findById(){
-        //code here
+    public Account findById() throws SQLException {
+        String sql = "Select * from JDBC.Account where id = 1";
+        Statement statement = JdbcUtils.getConect().createStatement();
+        // execute câu lệnh SQL
+        ResultSet resultSet = statement.executeQuery(sql);
+        Account account = new Account();
 
-        return null;
+        if (resultSet.next()) {
+            account.setId(1);
+            // Set giá trị user Name
+            String username = resultSet.getString("username");
+            account.setUsername(username);
+            account.setFirstName(resultSet.getString("first_name"));
+            account.setLastName(resultSet.getString("last_name"));
+            String roleString = resultSet.getString("role");
+            account.setRole(Role.valueOf(roleString));
+        } else {
+            System.out.println("Ko có thông tin account");
+            return null;
+        }
+        System.out.println(account);
+        return account;
     }
 }
