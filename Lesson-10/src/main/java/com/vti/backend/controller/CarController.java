@@ -16,4 +16,20 @@ public class CarController {
     public void addNewCar(Car car) throws SQLException {
         service.addNewCar(car);
     }
+
+    public Car findById(int carId) throws SQLException {
+        return service.findById(carId);
+    }
+
+    public void deleteById(int id) throws SQLException {
+        service.deleteById(id);
+    }
+
+    public void update(int carId, String color, String note) throws SQLException {
+        service.update(carId, color, note);
+    }
+
+    public List<Car> demoStoreProcedure() throws SQLException {
+        return service.demoStoreProcedure();
+    }
 }

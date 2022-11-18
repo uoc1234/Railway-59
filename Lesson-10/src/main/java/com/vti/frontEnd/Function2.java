@@ -13,16 +13,7 @@ public class Function2 {
 
     public void getAllCar() throws SQLException {
         List<Car> cars = controller.getAllCar();
-
-        String leftAlignFormat = "| %-3s| %-15s | %-15s | %-17s | %-15s | %-15s |%n";
-        System.out.format("+----+-----------------+-----------------+--------------------+-----------------+-----------------+%n");
-        System.out.format("| id |      Maker      |      model      |        Date        |      color      |       note      |%n");
-        System.out.format("+----+-----------------+-----------------+--------------------+-----------------+-----------------+%n");
-        for (Car car : cars) {
-            System.out.format(leftAlignFormat, car.getCarID(), car.getMaker(), car.getModel(), car.getDate(), car.getColor(), car.getNote());
-        }
-        System.out.format("+----+-----------------+-----------------+--------------------+-----------------+-----------------+%n");
-
+        printListCar(cars);
     }
 
     public void addNewCar() throws SQLException {
@@ -66,4 +57,54 @@ public class Function2 {
         controller.addNewCar(car);
     }
 
+    public void findById() throws SQLException {
+        System.out.println("Mời bạn nhập CarId muốn tìm kiếm");
+        int carId = ScannerUtils.inputIntPositive();
+        Car car = controller.findById(carId);
+        if (car == null){
+            System.err.println("CarId không tồn tại!");
+        } else {
+            String leftAlignFormat = "| %-3s| %-15s | %-15s | %-17s | %-15s | %-15s |%n";
+            System.out.format("+----+-----------------+-----------------+--------------------+-----------------+-----------------+%n");
+            System.out.format("| id |      Maker      |      model      |        Date        |      color      |       note      |%n");
+            System.out.format("+----+-----------------+-----------------+--------------------+-----------------+-----------------+%n");
+            System.out.format(leftAlignFormat, car.getCarID(), car.getMaker(), car.getModel(), car.getDate(), car.getColor(), car.getNote());
+            System.out.format("+----+-----------------+-----------------+--------------------+-----------------+-----------------+%n");
+        }
+    }
+
+    public void deleteById() throws SQLException {
+        System.out.println("Mời bạn nhập CarId muốn xoá");
+        int carId = ScannerUtils.inputIntPositive();
+        controller.deleteById(carId);
+    }
+
+    public void updateCar() throws SQLException {
+        System.out.println("Mời bạn nhập CarId muốn chỉnh sửa");
+        int carID = ScannerUtils.inputIntPositive();
+
+        System.out.println("Mời bạn nhập vào màu xe muốn sửa");
+        String color = ScannerUtils.inputString();
+
+        System.out.println("Mời bạn nhập vào ghi chú muốn sửa: ");
+        String note = ScannerUtils.inputString();
+
+        controller.update(carID, color, note);
+    }
+
+    public void demoStoreProcedure() throws SQLException {
+        List<Car> cars = controller.demoStoreProcedure();
+        printListCar(cars);
+    }
+
+    private void printListCar(List<Car> cars){
+        String leftAlignFormat = "| %-3s| %-15s | %-15s | %-17s | %-15s | %-15s |%n";
+        System.out.format("+----+-----------------+-----------------+--------------------+-----------------+-----------------+%n");
+        System.out.format("| id |      Maker      |      model      |        Date        |      color      |       note      |%n");
+        System.out.format("+----+-----------------+-----------------+--------------------+-----------------+-----------------+%n");
+        for (Car car : cars) {
+            System.out.format(leftAlignFormat, car.getCarID(), car.getMaker(), car.getModel(), car.getDate(), car.getColor(), car.getNote());
+        }
+        System.out.format("+----+-----------------+-----------------+--------------------+-----------------+-----------------+%n");
+    }
 }

@@ -18,4 +18,24 @@ public class CarService implements ICarService{
     public void addNewCar(Car car) throws SQLException {
         repository.addNewCar(car);
     }
+
+    @Override
+    public Car findById(int carId) throws SQLException {
+        return repository.findById(carId);
+    }
+
+    @Override
+    public void deleteById(int carId) throws SQLException {
+        repository.deleteById(carId);
+    }
+
+    @Override
+    public void update(int carId, String color, String note) throws SQLException {
+        repository.updateCar(carId, color, note);
+    }
+
+    @Override
+    public List<Car> demoStoreProcedure() throws SQLException {
+        return repository.demoStoreProcedure();
+    }
 }

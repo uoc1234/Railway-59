@@ -18,7 +18,8 @@ public class Program2 {
             System.out.println("3. Tìm kiếm Car theo id");
             System.out.println("4. Update Car");
             System.out.println("5. Xoá Car theo Id");
-            System.out.println("6. Thoát");
+            System.out.println("6. Danh sách ô tô được sản xuất trong năm");
+            System.out.println("7. Thoát");
 
             menu = Integer.parseInt(scanner.nextLine());
             switch (menu) {
@@ -29,15 +30,18 @@ public class Program2 {
                     function2.addNewCar();
                     break;
                 case 3:
-//                    function2.getById();
+                    function2.findById();
                     break;
                 case 4:
-//                    deletaCanbo();
+                    function2.updateCar();
                     break;
                 case 5:
-                    // method here
+                    function2.deleteById();
                     break;
                 case 6:
+                    function2.demoStoreProcedure();
+                    break;
+                case 7:
                     return;
             }
         }
