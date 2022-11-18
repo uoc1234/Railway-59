@@ -4,10 +4,7 @@ import com.vti.entity.Account;
 import com.vti.entity.Role;
 import com.vti.utils.JdbcUtils;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,12 +17,14 @@ public class AccountRepository {
         ResultSet resultSet = statement.executeQuery(sql);
         List<Account> accounts = new ArrayList<>();
         while (resultSet.next()){
+            // Lấy các giá trị được trả về
             int id = resultSet.getInt("Id");
             String username = resultSet.getString("username");
-
+            // Set các giá trị cho user
             Account account = new Account();
             account.setId(id);
             account.setUsername(username);
+            // Gán đối tượng user vào list
             accounts.add(account);
         }
         return accounts;
