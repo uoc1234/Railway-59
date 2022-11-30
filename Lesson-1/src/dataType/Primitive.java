@@ -8,7 +8,7 @@ public class Primitive {
         byte number_1 = 127; // -128 -> 127 (1 byte)
 
         short number_2; // -32 768 -> 32 767 (2 byte)
-        int number_3 = Integer.MAX_VALUE +2 ; // -2^31 -> (2^31 - 1) (4 byte)
+        int number_3 = char_1; // Integer.MAX_VALUE +2 ; // -2^31 -> (2^31 - 1) (4 byte)
         long number_4; // -2^62 -> (2^63 - 1) (8 byte)
 
         // Số thực

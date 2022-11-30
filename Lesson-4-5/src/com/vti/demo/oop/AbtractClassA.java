@@ -11,6 +11,8 @@ public abstract class AbtractClassA {
         System.out.println("Từ cha");
     }
 
+    abstract void abc2();
+
     public AbtractClassA(){
     }
 

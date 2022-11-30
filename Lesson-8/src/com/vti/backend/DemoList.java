@@ -15,12 +15,7 @@ public class DemoList {
 //    * Có một lượng lớn quá trình add/remove
     public static void main(String[] args) {
         DemoList demo = new DemoList();
-        Set<Integer> integers = new HashSet<>();
-        integers.add(1);
-        integers.add(1);
-        integers.add(2);
-        integers.add(3);
-        System.out.println(integers);
+        demo.demoVector();
     }
     public void demoArrayList(){
         List<Integer> integers = new ArrayList<>();
@@ -64,6 +59,25 @@ public class DemoList {
         // Xoá phần tử trong list
         integers.remove(0);
         System.out.println(integers);
+    }
+
+    public void demoVector(){
+        List<Integer> integers = new Vector<>();
+        integers.add(1);
+        integers.add(1);
+        integers.add(2);
+        integers.add(3);
+        System.out.println("Size: " + integers.size());
+        System.out.println(integers);
+
+        // Lấy 1 phần từ theo index
+        Integer kq = integers.get(0);
+        System.out.println("Phần từ có index 0: " + kq);
+
+        // Xoá phần tử trong list
+        integers.remove(0);
+        System.out.println(integers);
+
     }
 
 }

@@ -1,5 +1,7 @@
 package dataType;
 
+import object.Account;
+
 import java.util.Date;
 
 public class DataType {
@@ -11,6 +13,12 @@ public class DataType {
     Gender dataType_3 = Gender.Male;
 
     int[] dataType_4 = {1,2,3};
+    boolean aBoolean1 = true;
+    int a = 1;
+    Integer integer = new Integer(a);
+    Integer integer2 = Integer.valueOf(a);
+
+    Account account = new Account();
 }
 
 enum Gender{

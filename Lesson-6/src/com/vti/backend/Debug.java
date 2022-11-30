@@ -4,7 +4,7 @@ public class Debug {
     public static void main(String[] args) throws Exception {
         Debug debug = new Debug();
 
-            debug.vd2();
+            debug.vd1();
 
     }
 

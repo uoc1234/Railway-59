@@ -7,6 +7,9 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class JdbcUtils {
+    public static void main(String[] args) {
+        JdbcUtils.getConect();
+    }
     static Connection connection = null;
     // Tạo 1 method chuyên dùng để conect tới My Sql
     public static Connection getConect(){
@@ -22,7 +25,7 @@ public class JdbcUtils {
             Class.forName(driver);
             connection = DriverManager.getConnection(url, user, pass);
             if (connection != null) {
-//                System.out.println("Thanh cong1");
+                System.out.println("Thanh cong1");
             } else {
                 System.out.println("That bai");
             }
