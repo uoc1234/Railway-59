@@ -6,6 +6,8 @@ public class Account {
     private String password;
     private String firstName;
 
+    private String email;
+
     private String lastName;
 
     private Role role;
@@ -16,6 +18,14 @@ public class Account {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getLastName() {

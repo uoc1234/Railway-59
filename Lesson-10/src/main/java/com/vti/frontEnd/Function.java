@@ -17,13 +17,13 @@ public class Function {
         if (account == null){
             System.out.println("Account không tồn tại!");
         } else {
-            String leftAlignFormat = "| %-3s| %-20s | %-20s |%n";
-            System.out.format("+----+----------------------+----------------------+%n");
-            System.out.format("| id |      FullName        |        Email         |%n");
-            System.out.format("+----+----------------------+----------------------+%n");
+            String leftAlignFormat = "| %-3s| %-20s | %-20s | %-20s |%n";
+            System.out.format("+----+----------------------+----------------------+----------------------+%n");
+            System.out.format("| id |      FullName        |        Email         |         Role         |%n");
+            System.out.format("+----+----------------------+----------------------+----------------------+%n");
 //            System.out.println(account);
-            System.out.format(leftAlignFormat,account.getId(), account.getUsername(),account.getRole());
-            System.out.format("+----+----------------------+----------------------+%n");
+            System.out.format(leftAlignFormat,account.getId(), account.getUsername(),account.getEmail(), account.getRole());
+            System.out.format("+----+----------------------+----------------------+----------------------+%n");
         }
     }
 
